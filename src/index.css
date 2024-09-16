@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.section {
+  @apply grid grid-cols-6 gap-1;
+}
+
+.header {
+  @apply bg-[#ffcc01] p-4 shadow-md
+}
+
+.switch-container {
+  @apply flex justify-center items-center mt-5
+}
+
+
+.switch-button {
+@apply relative bg-[#5631b9] text-white rounded-full px-5 py-2 text-lg cursor-pointer transition-colors duration-300 ease-out w-[100px] h-[40px] focus:outline-none
+}
+
+.switch-circle {
+  @apply absolute top-[5px] left-[5px] w-[30px] h-[30px] bg-white rounded-full transition-transform duration-300 ease-out
+}
+
+.container {
+  @apply max-w-[1200px] mx-auto flex flex-col items-center gap-4
+}
+
+.logo {
+  @apply text-2xl font-bold text-[#2b2d42]
+}
+
+.footer {
+  @apply bg-[#2b2d42] text-white p-8 text-center
+}
+
+.credits {
+  @apply text-base m-0
+}
+
+.social-links {
+  @apply flex gap-6 list-none p-0 m-0
+}
+
+.social-links li {
+  @apply text-xl
+}
+
+.social-links li a {
+  @apply text-white decoration-slice
+  /* text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease; */
+}
+
+.social-links li a:hover {
+  @apply text-amber-400
+}
+
+.social-links li i {
+  @apply mr-2
+}
+
+.switch-button::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.switch-button.active {
+  background-color: #4caf50;
+}
+
+.switch-button.active::before {
+  transform: translateX(60px);
+}
+
+.switch-button:hover {
+  background-color: #3201bb;
+}
+
+.switch-button.active:hover {
+  background-color: #3e8e41;
+}
